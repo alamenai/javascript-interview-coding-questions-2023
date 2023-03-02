@@ -83,3 +83,31 @@ for (let index = 0; index < users.length; index++) {
 ```
 
 </details>
+
+3. Sort the given array by **age**:
+
+```javascript
+const students = [
+	{ name: 'Jhon', age: 20 },
+	{ name: 'Alex', age: 22 },
+	{ name: 'Kelly', age: 21 },
+	{ name: 'Joma', age: 23 },
+	{ name: 'Peter', age: 24 },
+];
+```
+
+<details>
+<summary>
+Solution
+</summary>
+
+```javascript
+// Using map and sort functions
+const sortedAges = students
+	.map(({ age }) => age)
+	.sort((prev, next) => prev - next);
+```
+
+[Submit your solution](https://github.com/MenaiAla/javascript-interview-coding-questions-2023/pulls)
+
+</details>
