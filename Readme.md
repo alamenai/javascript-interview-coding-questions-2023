@@ -40,3 +40,46 @@ for (let index = 0; index < users.length; index++) {
 ```
 
 </details>
+
+2. Get an array of **online** users from the given array:
+
+```javascript
+const users = [
+	{ username: 'Jhon', isOnline: true },
+	{ username: 'Alex', isOnline: false },
+	{ username: 'Kelly', isOnline: false },
+	{ username: 'Joma', isOnline: true },
+	{ username: 'Peter', isOnline: false },
+];
+```
+
+<details>
+<summary>
+Solution
+</summary>
+
+```javascript
+// Using map filter and map functions
+const onlineUsers = users
+	.filter(({ username, isOnline }) => {
+		if (isOnline) return username;
+	})
+	.map(({ username }) => username);
+// Using forEach function
+const onlineUsers = [];
+users.forEach(({ username, isOnline }) => {
+	if (isOnline) onlineUsers.push(username);
+});
+// Using for-of loop
+const onlineUsers = [];
+for (const { username, isOnline } of users) {
+	if (isOnline) onlineUsers.push(username);
+}
+// Using for-loop
+const onlineUsers = [];
+for (let index = 0; index < users.length; index++) {
+	if (users[index].isOnline) onlineUsers.push(users[index].username);
+}
+```
+
+</details>
